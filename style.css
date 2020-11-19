@@ -1,0 +1,35 @@
+html, body {
+  height:100%;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  background-color: white;
+}
+
+div#daddy {
+  height: 50%;
+  width: 50%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 200px;
+  border-radius: 20px;
+}
+
+div#formInputLocation {
+  text-align: center;
+  padding-top: 50px;
+}
+
+input[type="text"]#inpCityName {
+  text-align: center;
+  border: solid black 2px;
+  border-radius: 10px;
+  outline: none;
+}
+
+button#btnGetWeatherInfo {
+  background-color: teal;
+  border: solid black 2px;
+  outline: none;
+}
