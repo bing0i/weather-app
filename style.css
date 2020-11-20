@@ -1,9 +1,25 @@
+* {
+  font-family: 'Nerko One', cursive;
+  font-size: 20px;
+}
+
 html, body {
-  height:100%;
+  height: 100%;
   overflow: hidden;
   margin: 0;
   padding: 0;
   background-color: white;
+}
+
+h1 {
+  margin-top: 175px;
+  text-align: center;
+  font-size: 40px;
+  color: #670AC1;
+}
+
+h1:hover {
+  color: #FFE000;
 }
 
 div#daddy {
@@ -12,24 +28,126 @@ div#daddy {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   margin-left: auto;
   margin-right: auto;
-  margin-top: 200px;
   border-radius: 20px;
 }
 
 div#formInputLocation {
   text-align: center;
-  padding-top: 50px;
+  height: 20%;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+div#displayWeatherInfo {
+  height: 80%;
+}
+
+div#leftContent {
+  margin-top: 30px;
+  text-align: center;
+  float: left;
+  height: 100%;
+  width: 50%;
+  border-bottom-left-radius: 20px;
+}
+
+div#rightContent {
+  margin-top: 75px;
+  float: right;
+  height: 100%;
+  width: 50%;
+  border-bottom-right-radius: 20px;
+}
+
+div.weatherInfo {
+  margin-bottom: 25px;
+}
+
+div#leftContent div.weatherInfo {
+  margin-bottom: 5px;
+}
+
+div#rightContent div.weatherInfo {
+  margin-left: 100px;
 }
 
 input[type="text"]#inpCityName {
+  margin-top: 40px;
   text-align: center;
-  border: solid black 2px;
+  border: solid rgba(0, 0, 0, 0.1) 1px;
   border-radius: 10px;
   outline: none;
+  width: 80%;
+  height: 30%;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+input[type="text"]#inpCityName:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.15), 0 6px 20px 0 rgba(0, 0, 0, 0.05);
+}
+
+input[type="text"]#inpCityName:focus {
+  border: solid #FFE000 1px;
+  color: black;
 }
 
 button#btnGetWeatherInfo {
-  background-color: teal;
-  border: solid black 2px;
+  cursor: pointer;
+  margin-left: 5px;
+  background-color: #FFE000;
+  border: none;
   outline: none;
+  padding: 5px 20px;
+  border-radius: 10px;
+}
+
+button#btnGetWeatherInfo:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+  background-color: #670AC1;
+  color: white;
+}
+
+img#weatherGif {
+  width: 150px;
+  height: 150px;
+  border-radius: 20px;
+}
+
+span {
+  color: rgba(0, 0, 0, 0.75);
+}
+
+span#cityName, span#description {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+span#temp {
+  font-size: 45px;
+  color: black;
+}
+
+#loader {
+  visibility: hidden;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 1;
+  text-align: center;
+  border: 5px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 5px solid #FFE000;
+  width: 30px;
+  height: 30px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }

@@ -4,15 +4,58 @@
     <meta charset="UTF-8">
     <title>Courgette's Weather App</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://emoji-css.afeld.me/emoji.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nerko+One&display=swap" rel="stylesheet">
   </head>
   <body>
+    <h1>Weather App</h1>
     <div id="daddy">
       <div id="formInputLocation">
-        <input type="text" id="inpCityName">
-        <button id="btnGetWeatherInfo">yo</button>
+        <input type="text" id="inpCityName" placeholder="Type city name here..." autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+        <button id="btnGetWeatherInfo">Umbala</button>
       </div>
-     
-      <script src="script.js"></script>
+
+      <div id="displayWeatherInfo">
+        <div id="loader"></div>
+
+        <div id="leftContent">
+          <div class="weatherInfo">
+            <span id="cityName"></span>
+          </div>
+          <div class="weatherInfo">
+            <span id="temp"></span>
+          </div>
+          <div class="weatherInfo">
+            <img id="weatherGif"><br>
+            <span id="description"></span>
+          </div>
+        </div>
+        
+        <div id="rightContent">
+          <div class="weatherInfo">
+            <i class="em em-no_mouth" aria-role="presentation" aria-label="FACE WITHOUT MOUTH"></i>
+            <span id="feelsLike"></span>
+          </div>
+
+          <div class="weatherInfo">
+            <i class="em em-droplet" aria-role="presentation" aria-label="DROPLET"></i>
+            <span id="humidity"></span>
+          </div>
+
+          <div class="weatherInfo">
+            <i class="em em-leaves" aria-role="presentation" aria-label="LEAF FLUTTERING IN WIND"></i>
+            <span id="wind"></span>
+          </div>
+
+          <div class="weatherInfo">
+            <i class="em em-cloud" aria-role="presentation" aria-label="CLOUD"></i>
+            <span id="cloudiness"></span>
+          </div>
+        </div>
+      </div>
     </div>
+    
+    <script src="script.js"></script>
   </body>
 </html>
