@@ -56,6 +56,17 @@ async function initEvents() {
   btnGetWeatherInfo.addEventListener('click', async () => {
     const loader = document.querySelector('#loader');
     loader.style.visibility = 'visible';
+    displayDOMWeatherInfo({
+      cityName: 'Please wait a bit... or try again',
+      temp: '',
+      humidity: '',
+      wind: '',
+      description: '',
+      weatherGif: await getWeatherGif('wait'),
+      feelsLike: '',
+      cloudiness: '',
+    });
+
     const weatherObject = await getWeatherObject(await getWeatherResponse(inpCityName.value));
     loader.style.visibility = 'hidden';
     displayDOMWeatherInfo(weatherObject);
